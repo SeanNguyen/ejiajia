@@ -100,6 +100,8 @@
 		}
 
 		.featureResult {
+			position: relative;
+
 			.houseImage {
 				width: 60%;
 				height: auto;
@@ -142,6 +144,41 @@
 				@media (min-width: $mobileMaxWidth) {
 					display: none;
 				}
+			}
+
+			.likeButton {
+				@media (min-width: $mobileMaxWidth) {
+					top: 75px;
+				}
+			}
+
+			.compareButton {
+				@media (min-width: $mobileMaxWidth) {
+					top: 150px;
+				}
+			}
+
+			#triangle 
+			{
+			    border-color: #489E94 rgba(0,0,0,0) rgba(0,0,0,0) #489E94;
+			    border-style: solid; 
+			    border-width: 50px; 
+			    width: 0px; /* real width is 100px; */
+			    height: 0px; /* same as width */
+			    line-height: 0px;
+			    position: absolute;
+			}
+
+
+			#text {
+			    font-size: 20px;
+			    position: absolute;
+			    top: 20px; /* 50 - something related to line heigth */
+			    left: -30px; /* 50 - 142/2 - something related to line height */
+			    transform: rotate(-45deg);
+			    width: 142px; /* base width -> (100^2 + 100^2)^1/2 */
+			    text-align: center;
+			    color: #FCFCFC;
 			}
 		}
 
