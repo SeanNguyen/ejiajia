@@ -1,0 +1,114 @@
+@import 'config';
+
+.resultContainer {
+	.resultList {
+		.result {
+			position: relative;
+			outline: solid 1px $grey;
+
+			.houseImage {
+				width: 100%;
+				height: auto;
+			}
+
+			.likeButton {
+				position: absolute;
+				top: 20px; bottom: auto;
+				right: 15px; left: auto;
+				height: 50px;
+				width: 50px;
+				background: none;
+				outline: none;
+				border: none;
+				padding: 0;
+			}
+
+			.compareButton {
+				position: absolute;
+				top: 40%; bottom: auto;
+				right: 20px; left: auto;
+				height: 40px;
+				width: 40px;
+
+				color: #FCFCFC;
+				font-weight: bold;
+				font-size: 12px;
+
+				border-radius: 50%;
+				border: none;
+				background-color: rgba(0,0,0, 0.5);
+				outline: none;
+			}
+
+			.detail {
+				position: absolute;
+				top: auto; bottom: 40px;
+				right: 0; left: 0;
+				background: linear-gradient(rgba(0,0,0,0), #000);
+
+				h5 {
+					margin: 5px;
+					color: #FCFCFC;
+					font-weight: bold;
+				}
+
+				.address1 {
+					color: $primaryColor;
+				}
+
+				.busInfo {
+					height: 20px;
+					margin-top: 10px;
+
+					img {
+						float: left;
+						height: 20px;
+					}
+
+					h5 {
+						font-size: 14px;
+						margin: 3px 0px 3px 20px;
+						color: #FCFCFC;
+						font-weight: bold;
+					}
+				}
+			}
+
+			.statistic {
+				background-color: #FCFCFC;
+				height: 40px;
+				overflow: hidden;
+				padding: 10px;
+
+				.detailItem {
+					height: 20px;
+					float: left;
+					font-size: 16px;
+					margin: 0 10px;
+
+					img {
+						height: 14px;
+						margin: 3px;
+						float: left;
+					}
+				}
+				.price {
+					float: right;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.col-xs-12 {
+			padding: 0;
+		}
+	}
+
+	.map {
+		@media (max-width: $mobileMaxWidth) {
+			display: none;
+		}
+
+		padding: 0;
+	}
+}
