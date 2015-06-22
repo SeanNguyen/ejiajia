@@ -1,0 +1,79 @@
+.header {
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h3 {
+      margin: 0;
+    }
+
+    a {
+      margin: 0;
+    }
+
+    .icon {
+      height: 60px;
+      width: auto;
+      margin-left: 10px;
+      float: left;
+    }
+
+    #searchBox {
+      position: relative;
+      height: 40px;
+      outline-style: solid;
+      outline-width: 2px;
+      outline-color: $grey;
+      padding: 5px;
+      margin: 15px 200px 15px 100px;
+
+      .selectedItem {
+        float: left;
+        height: 30px;
+        background-color: $secondaryColor;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        margin-right: 10px;
+
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $grey;
+
+        h5 {
+          float: left;
+          font-size: 16px;
+          margin: 2px;
+        }
+
+        .removeButton {
+          height: 10px;
+          float: right;
+          margin: 5px;
+        }
+      }
+
+      .inputContainer {
+        overflow: hidden;
+        margin-right: 50px;
+
+        input {
+          border: none;
+          outline: none;
+          font-size: 16px;
+          height: 30px;
+          overflow:hidden;
+          width: 100%;
+        }
+      }
+      
+      .iconSearch {
+        position: absolute;
+        top: 0; right: 0;
+        height: 20px;
+        width: auto;
+        float: right;
+        margin: 10px;
+      }
+    }
+  }
