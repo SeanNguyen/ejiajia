@@ -1,6 +1,33 @@
 @import 'config';
 
 .resultContainer {
+	.resultNavBar {
+		padding: 1px;
+		height: 50px;
+		background-color: $lightPrimaryColor;
+		margin: 0 -15px;
+
+		.numberOfResult {
+			height: 50px;
+			font-size: 18px;
+			padding: 15px;
+			float: left;
+		}
+
+		#sortController {
+			text-align: left;
+			height: 50px;
+			padding: 10px;
+			float: right;
+
+			select {
+				float: right;
+				width: 50%;
+				height: 30px;
+			}
+		}
+	}
+
 	.resultList {
 		.result {
 			position: relative;
