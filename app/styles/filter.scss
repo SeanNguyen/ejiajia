@@ -1,6 +1,30 @@
+@import 'config';
+
 .filter {
-	height: 80px;
+	min-height: 80px;
 	background-color: $primaryColor;
 	padding-top: 20px;
 	padding-bottom: 20px;
+
+	#showFilterButton {
+		height: 40px;
+		float: left;
+		border-right: solid 2px #FFF;
+
+		h4 {
+			margin: 0;
+			float: left;
+			color: #FCFCFC;
+			font-size: 20px;
+			margin: 10px;
+		}
+
+		.icon {
+			width: 10px;
+			height: auto;
+			float: left;
+			margin: 20px;
+			margin-left: 0px;
+		}
+	}
 }
