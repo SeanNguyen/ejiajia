@@ -1,0 +1,108 @@
+
+//GLOBAL PROPERTIES
+//colors
+$primaryColor: #54e6d7;
+$secondaryColor: #ecf9f8;
+$grey: #CCC;
+
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+
+
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+//notification for IE users
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+//restyle some bootstrap component a bit
+.container {
+  padding: 0;
+}
+
+body {
+  color: #808080;
+
+  .header {
+    height: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    h3 {
+      margin: 0;
+    }
+
+    a {
+      margin: 0;
+    }
+
+    .icon {
+      height: 60px;
+      width: auto;
+      margin-left: 10px;
+      float: left;
+    }
+
+    #searchBox {
+      height: 40px;
+      outline-style: solid;
+      outline-width: 2px;
+      outline-color: $grey;
+      padding: 5px;
+      margin: 15px 200px 15px 100px;
+
+      .selectedItem {
+        float: left;
+        height: 30px;
+        background-color: $secondaryColor;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        margin-right: 10px;
+
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $grey;
+
+        h5 {
+          float: left;
+          font-size: 16px;
+          margin: 2px;
+        }
+
+        .removeButton {
+          height: 10px;
+          float: right;
+          margin: 5px;
+        }
+      }
+
+      input {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        margin: 2px;
+      }
+
+      .iconSearch {
+        height: 20px;
+        width: auto;
+        float: right;
+        margin: 5px;
+      }
+    }
+  }
+
+  .filter {
+    height: 80px;
+    background-color: $primaryColor;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+}
