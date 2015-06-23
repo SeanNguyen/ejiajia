@@ -11,13 +11,14 @@
   padding: 0.2em 0;
 }
 
-//restyle some bootstrap component a bit
-.container {
-  padding: 0;
+@font-face {
+    font-family: "simhei";
+    src: url(../font/simhei.ttf) format("truetype");
 }
 
 body {
   color: #808080;
+  // font-family: simhei;
 
   @import 'header';
   @import 'filter';

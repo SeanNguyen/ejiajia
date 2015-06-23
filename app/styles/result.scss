@@ -74,6 +74,29 @@
 				border: none;
 				background-color: rgba(0,0,0, 0.5);
 				outline: none;
+
+				@media (max-width: $mobileMaxWidth) {
+					display: none;
+				}
+
+				img {
+					display: none;
+				}
+			}
+
+			.compareButton.liked {
+				background-color: rgba(84, 230, 215, 0.8);
+
+				img {
+					display: block;
+					margin-left: 5px;
+					height: auto;
+					width: 20px;
+				}
+
+				label {
+					display: none;
+				}
 			}
 
 			.detail {
