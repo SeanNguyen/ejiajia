@@ -195,7 +195,7 @@
 
 			#triangle 
 			{
-			    border-color: #489E94 rgba(0,0,0,0) rgba(0,0,0,0) #489E94;
+			    border-color: $darkPrimaryColor rgba(0,0,0,0) rgba(0,0,0,0) $darkPrimaryColor;
 			    border-style: solid; 
 			    border-width: 50px; 
 			    width: 0px; /* real width is 100px; */
@@ -220,6 +220,31 @@
 		.col-xs-12 {
 			padding: 0;
 		}
+
+		.pageNav {
+			height: 50px;
+			border-top: solid $grey 1px;
+			border-bottom: solid $grey 1px;
+			margin: 20px;
+			padding-top: 17px;
+			padding-bottom: 17px;
+			text-align: center;
+
+			.item {
+				float: left;
+				width: 14.285%;
+				height: 20px;
+
+				img {
+					height: 16px;
+					width: auto;
+				}
+			}
+
+			.current {
+				color: $primaryColor;
+			}
+		}
 	}
 
 	.map {
@@ -227,6 +252,106 @@
 			display: none;
 		}
 
+		position: relative;
 		padding: 0;
+
+		.pin {
+			position: absolute;
+
+			height: 40px;
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+
+			text {
+				position: absolute;
+				top: 7px; bottom: auto;
+				left: 35px; right: auto;
+				font-size: 12px;
+			}
+		}
+
+		#pin1 {
+			top: 70%; bottom: auto;
+			right: 50%; left: auto;
+		}
+
+		#pin2 {
+			top: 60%; bottom: auto;
+			right: 30%; left: auto;
+		}
+
+		.detail {
+			position: absolute;
+			top: 20%; bottom: auto;
+			left: 20%; right: auto;
+			height: 300px;
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+
+			.component {
+				position: absolute;	
+			}
+
+			.address {
+				height: 50px;
+				width: 100%;
+				top: 0; left: 0;
+				text-align: center;
+				margin-top: 10px;
+				margin-bottom: 10px;
+
+				h5 {
+					font-size: 12px;
+					font-weight: bold;
+					margin-bottom: 0;
+					margin-top: 5px;
+				}
+
+				.address1 {
+					color: $primaryColor;
+				}
+			}
+
+			.houseImage {
+				top: 50px; left: 10px; right: 10px;
+				 img {
+				 	width: 100%;
+				 	height: auto;
+				 }
+			}
+
+			.statistic {
+				background-color: #FCFCFC;
+				height: 40px;
+				overflow: hidden;
+				padding: 10px;
+				position: absolute;
+				bottom: 20px; top: auto;
+				left: 5px; right: 5px;
+
+				.detailItem {
+					height: 20px;
+					float: left;
+					font-size: 16px;
+					margin: 0 10px;
+
+					img {
+						height: 14px;
+						margin: 3px;
+						float: left;
+					}
+				}
+				.price {
+					float: right;
+					font-size: 14px;
+				}
+			}
+		}
 	}
 }

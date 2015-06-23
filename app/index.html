@@ -338,7 +338,7 @@
 
               <!-- Triangle Conner -->
               <div id="triangle"></div>
-              <div id="text">精选</div>
+              <div id="text"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> 精选</div>
               <!-- End triangle conner -->
 
               <img class="houseImage" src="images/house.jpg">
@@ -652,11 +652,135 @@
                 <div class="price"><strong>1, 305 万</strong></div>
               </div>
             </div>
+
+            <div class="result col col-xs-12 col-sm-6">
+              <img class="houseImage" src="images/house.jpg">
+
+              <!-- all the components below will be absolute -->
+              <button class="likeButton">
+                <img class="img img-responsive" src="images/icon_liked.png">
+              </button>
+
+              <button class="compareButton">
+                对比
+              </button>
+
+              <div class="detail">
+                <div class="row">
+                  <div class="col col-xs-8">
+                    <h5 class="address1">23 Hillview Avenue,</h5>
+                    <h5>Glendale Park, Singapore</h5>
+                  </div>
+
+                  <div class="col col-xs-4 busInfo">
+                    <img src="images/icon_bus.png" class="img img-responsive">
+                    <h5>0.5 公里</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- non-absolute position detail -->
+              <div class="statistic">
+                <div class="detailItem">
+                  <img src="images/icon_bedRoom.png" class="img img-responsive">
+                  3
+                </div>
+
+                <div class="detailItem">
+                  <img src="images/icon_bathRoom.png" class="img img-responsive">
+                  2
+                </div>
+
+                <div class="detailItem">
+                  <img src="images/icon_direction.png" class="img img-responsive">
+                  北东
+                </div>
+
+                <div class="price"><strong>1, 305 万</strong></div>
+              </div>
+            </div>
+
+            <!-- Page navigation -->
+            <div class="col col-xs-12">
+              <div class="pageNav">
+                <div class="item">
+                  <img src="images/icon_arrow_left.png">  
+                </div>
+
+                <div class="item">
+                  <text>1</text>
+                </div>
+
+                <div class="item current">
+                  <text>2</text>
+                </div>
+
+                <div class="item">
+                  <text>3</text>
+                </div>
+
+                <div class="item">
+                  <text>...</text>
+                </div>
+
+                <div class="item">
+                  <text>10</text>
+                </div>
+
+                <div class="item">
+                  <img src="images/icon_arrow_right.png">  
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <div class="map col col-md-5">
           <img class="img img-responsive" src="images/map.jpg">
+
+          <!-- absolute item that lay on the map -->
+          <div class="pin" id="pin1">
+            <text>874万</text>
+            <img src="images/map_pin.png">
+          </div>
+
+          <div class="pin" id="pin2">
+            <text>200万</text>
+            <img src="images/map_pin.png">
+          </div>
+
+          <div class="detail">
+            <div class="component address">
+              <h5 class="address1">60 罗拔申码头</h5>
+              <h5>新加坡</h5>
+            </div>
+
+            <div class="statistic">
+              <div class="detailItem">
+                  <img src="images/icon_bedRoom.png" class="img img-responsive">
+                  3
+                </div>
+
+                <div class="detailItem">
+                  <img src="images/icon_bathRoom.png" class="img img-responsive">
+                  2
+                </div>
+
+                <div class="detailItem">
+                  <img src="images/icon_direction.png" class="img img-responsive">
+                  北东
+                </div>
+
+                <div class="price"><strong>1, 305 万</strong></div>
+            </div>
+
+            <div class="component houseImage">
+              <img src="images/house.jpg">
+            </div>
+
+            <!-- TODO: use vector image here, now can just leave it here -->
+            <img src="images/map_item_background.png">
+          </div>
         </div>
       </div>
     </div>
