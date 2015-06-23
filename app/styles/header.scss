@@ -15,6 +15,10 @@
       height: 20px;
       margin: 20px;
       padding: 0;
+
+      @media (max-width: $mobileMaxWidth) {
+        display: none;
+      }
     }
 
     .icon {
@@ -24,66 +28,127 @@
       float: left;
     }
 
-    #searchBox {
-      position: relative;
-      height: 40px;
-      outline-style: solid;
-      outline-width: 2px;
-      outline-color: $grey;
-      padding: 5px;
-      margin: 15px 200px 15px 100px;
-
-      @media (max-width: $mobileMaxWidth) {
-        display: none;
-      }
-
-      .selectedItem {
-        float: left;
-        height: 30px;
-        background-color: $secondaryColor;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        margin-right: 10px;
-
+    @media (min-width: $mobileMaxWidth) {
+      #searchBox {
+        position: relative;
+        height: 40px;
         outline-style: solid;
-        outline-width: 1px;
+        outline-width: 2px;
         outline-color: $grey;
+        padding: 5px;
+        margin: 15px 200px 15px 100px;
 
-        h5 {
+        
+
+        .selectedItem {
           float: left;
-          font-size: 16px;
-          margin: 2px;
-        }
-
-        .removeButton {
-          height: 10px;
-          float: right;
-          margin: 5px;
-        }
-      }
-
-      .inputContainer {
-        overflow: hidden;
-        margin-right: 50px;
-
-        input {
-          border: none;
-          outline: none;
-          font-size: 16px;
           height: 30px;
-          overflow:hidden;
-          width: 100%;
+          background-color: $secondaryColor;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 10px;
+          margin-right: 10px;
+
+          outline-style: solid;
+          outline-width: 1px;
+          outline-color: $grey;
+
+          h5 {
+            float: left;
+            font-size: 16px;
+            margin: 2px;
+          }
+
+          .removeButton {
+            height: 10px;
+            float: right;
+            margin: 5px;
+          }
+        }
+
+        .inputContainer {
+          overflow: hidden;
+          margin-right: 50px;
+
+          input {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            height: 30px;
+            overflow:hidden;
+            width: 100%;
+          }
+        }
+        
+        .iconSearch {
+          position: absolute;
+          top: 0; right: 0;
+          height: 20px;
+          width: auto;
+          float: right;
+          margin: 10px;
         }
       }
-      
-      .iconSearch {
-        position: absolute;
-        top: 0; right: 0;
-        height: 20px;
-        width: auto;
-        float: right;
-        margin: 10px;
+    }
+
+    @media (max-width: $mobileMaxWidth) {
+      #searchBox {
+        position: relative;
+        height: 30px;
+        outline-style: solid;
+        outline-width: 2px;
+        outline-color: $grey;
+        padding: 5px;
+        margin: 15px 10px 15px 80px;
+
+        .selectedItem {
+          float: left;
+          height: 20px;
+          background-color: $secondaryColor;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-left: 5px;
+          margin-right: 5px;
+
+          outline-style: solid;
+          outline-width: 1px;
+          outline-color: $grey;
+
+          h5 {
+            float: left;
+            font-size: 10px;
+            margin: 0px;
+          }
+
+          .removeButton {
+            height: 8px;
+            float: right;
+            margin: 2px 3px;
+          }
+        }
+
+        .inputContainer {
+          overflow: hidden;
+          margin-right: 50px;
+
+          input {
+            border: none;
+            outline: none;
+            font-size: 16px;
+            height: 30px;
+            overflow:hidden;
+            width: 100%;
+          }
+        }
+        
+        .iconSearch {
+          position: absolute;
+          top: 0; right: 0;
+          height: 16px;
+          width: auto;
+          float: right;
+          margin: 10px;
+        }
       }
     }
   }
