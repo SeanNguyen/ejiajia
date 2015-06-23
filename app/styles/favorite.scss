@@ -1,0 +1,103 @@
+@import 'config';
+
+.favorite {
+	@media (max-width: 1000px) {
+        display: none;
+    }
+
+	position: fixed;
+	bottom: 0; top: auto;
+	left: 0; right: 0;
+
+	height: 150px;
+	widows: 100%;
+
+	background-color: $secondaryColor;
+	padding: 10px;
+
+	.item {
+		float: left;
+		height: 130px;
+	}
+
+	.quitArea {
+		width: 100px;
+		border-right: solid 1px $grey;
+
+		img {
+			height: 30px;
+			width: auto;
+			margin: 50px 35px 10px;
+		}
+
+		h5 {
+			text-align: center;
+			margin-top: 0;
+			font-weight: bold;
+		}
+	}
+
+	.houseItem {
+		width: 150px;
+		text-align: center;
+		padding-top: 10px;
+
+		.houseInfo {
+			position: relative;
+			height: 80px;
+
+			img {
+				height: 100%;
+				width: auto;
+			}
+
+			label {
+				display: none;
+			}
+		}
+
+		.description {
+			font-size: 12px;
+			margin-top: 5px;
+			margin-bottom: 0px;
+			text-align: center;
+		}
+
+		.title {
+			color: $primaryColor;
+			font-weight: bold;
+		}
+	}
+
+	.houseItem.sold {
+		.houseInfo {
+			label {
+				position: absolute;
+				top: 0; left: 10px; right: auto;
+				z-index: 1000;
+				display: block;
+				height: 100%;
+				width: calc(100% - 20px);
+				background-color: rgba(0,0,0,0.5);
+			}
+		}
+	}
+
+	.moreInfoArea {
+		float: right;
+		width: 200px;
+		text-align: center;
+
+		button {
+			width: 100px;
+			height: 30px;
+			background-color: $darkPrimaryColor;
+			border: none;
+			outline: none;
+
+			font-size: 12px;
+			color: #FCFCFC;
+			font-weight: bold;
+		}
+	}
+}

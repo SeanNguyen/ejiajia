@@ -32,4 +32,8 @@ body {
   @media (min-width: $phoneMaxWidth) {
       padding-bottom: 100px;
   }
+
+  .item {
+    overflow: hidden;
+  }
 }
