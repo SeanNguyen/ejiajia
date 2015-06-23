@@ -29,38 +29,51 @@
 		}
 	}
 
-	.selectedItem {
+    .selectedItemContainer {
+        overflow: hidden;
+        max-height: 40px;
+        max-width: 50%;
         float: left;
-        height: 26px;
-        background-color: $secondaryColor;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        padding-left: 10px;
-        padding-right: 5px;
-        margin: 7px 5px;
 
-        outline-style: solid;
-        outline-width: 1px;
-        outline-color: $grey;
-
-        .categoryImage {
-        	height: 16px;
-        	width: auto;
-        	float: left;
+        @media (max-width: $phoneMaxWidth) {
+            max-height: 0px;
         }
 
-        h5 {
-          float: left;
-          font-size: 12px;
-          margin: 2px;
-        }
+        .selectedItem {
+            float: left;
+            height: 26px;
+            background-color: $secondaryColor;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 5px;
+            margin: 7px 5px;
 
-        .removeButton {
-          height: 10px;
-          float: right;
-          margin: 3px;
-        }
+            outline-style: solid;
+            outline-width: 1px;
+            outline-color: $grey;
+
+            .categoryImage {
+                height: 16px;
+                width: auto;
+                float: left;
+            }
+
+            h5 {
+              float: left;
+              font-size: 12px;
+              margin: 2px;
+            }
+
+            .removeButton {
+              height: 10px;
+              float: right;
+              margin: 3px;
+            }
+        }    
     }
+
+	
 
     #expandButton {
     	float: left;

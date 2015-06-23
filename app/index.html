@@ -90,7 +90,7 @@
             <img class="removeButton" src="images/icon_remove.png">
           </div>
         </div>
-        <button id="expandButton">与 4 个筛选...</button>
+        <button id="expandButton" onclick="toggleFilter()">与 4 个筛选...</button>
       </div>
 
       <div class="resultContainer">
@@ -100,8 +100,9 @@
                 共找到 1250 个楼盘
               </div>
               <div id="sortController">
-                <form class="form-inline">
-                  默认排序 :
+                  <div>
+                    默认排序 :
+                  </div>
                   <select class="form-control">
                     <option>售价 (上）</option>
                     <option>2</option>
@@ -109,7 +110,6 @@
                     <option>4</option>
                     <option>5</option>
                   </select>
-                </form>
               </div>
           </div>
 
