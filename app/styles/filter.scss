@@ -12,12 +12,15 @@
 		float: left;
 		border-right: solid 2px #FFF;
 
-		h4 {
+		button {
 			margin: 0;
 			float: left;
 			color: #FCFCFC;
 			font-size: 20px;
-			margin: 10px;
+			margin: 5px;
+            background: none;
+            border: none;
+            outline: none;
 		}
 
 		.icon {
@@ -73,8 +76,6 @@
         }    
     }
 
-	
-
     #expandButton {
     	float: left;
         height: 26px;
@@ -83,4 +84,131 @@
     	outline: none;
     	border: none;
     }
+}
+
+.filterOptions {
+    display: none;
+    width: 100%;
+
+    @media (min-width: 1000px) {
+        >.row>.leftCol {
+            border-right: solid $grey 1px;
+        }
+    }
+    
+
+    .item {
+        width: 100%;
+        min-height: 60px;
+        font-size: 12px;
+        padding-top: 10px;
+        border-bottom: solid 1px $grey;
+
+        .item {
+            border: none;
+
+            .fieldName {
+                width: 40px;
+            }
+        }
+
+        .fieldImage {
+            float: left;
+            width: 14px;
+            height: auto;
+
+            margin: 10px;
+        }
+
+        .fieldName {
+            float: left;
+            width: 60px;
+            margin-top: 10px;
+        }
+
+        .fieldOption {
+            float: left;
+            margin: 10px 3px;
+            font-size: 12px;
+
+            input {
+                width: 30px;
+                height: 20px;   
+            }
+
+            button {
+                height: 20px;
+                padding-right: 0px;
+                padding-left: 0px;
+                font-size: 10px;
+                font-weight: normal;
+                color: #FCFCFC;
+                width: 40px;
+            }
+        }
+
+        .dash {
+            float: left;
+            padding-top: 10px;
+        }
+    }
+
+    #priceField {
+        input[type=text] {
+            width: 70px;
+        }
+
+        .priceSlider {
+            float: right;
+        }
+
+        .slider-handle {
+            background-color: $primaryColor;
+            background-image: none;
+        }
+
+        .slider-selection {
+            background-image: none;
+            background-color: $lightPrimaryColor;
+        }
+
+        .slider-horizontal {
+            width: 200px;
+            margin-left: 100px;
+        }
+
+        .tooltip, .tooltip-inner, .tooltip-arrow {
+            display: none;
+        }
+    }
+
+    #additional {
+        .fieldName {
+            width: calc(100% - 40px);
+        }
+
+        .checkbox {
+            height: 30px;
+            padding-left: 20px;
+        }
+
+        input[type=checkbox] {
+            height: 16px;
+            width: 16px;
+            border-radius: 0;
+            margin-top: 0px;
+        }
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        background-color: $primaryColor;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        color: #FCFCFC;
+        font-weight: bold;
+    }
+    
 }

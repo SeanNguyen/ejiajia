@@ -19,3 +19,14 @@ function toggleFilter() {
 		$( '#expandButton' ).text(TEXT_EXPAND);	
 	}
 }
+
+function toggleFilterOption() {
+	if($('.filterOptions').css('display') === 'none') {
+		$('.filterOptions').css({ 'display': 'block'});
+	} else {
+		$('.filterOptions').css({ 'display': 'none'});
+	}
+}
+
+//load slider component
+$("#priceSlider").slider({});

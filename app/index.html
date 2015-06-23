@@ -9,6 +9,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -48,7 +49,7 @@
 
       <div class="filter">
         <div id="showFilterButton">
-          <h4>筛选条件</h4>
+          <button onclick="toggleFilterOption()">筛选条件</button>
           <img src="images/icon_arrowDown.png" class="icon">
         </div>
 
@@ -91,6 +92,223 @@
           </div>
         </div>
         <button id="expandButton" onclick="toggleFilter()">与 4 个筛选...</button>
+      </div>
+
+      <div class="filterOptions">
+        <div class="row">
+          <div class="col col-xs-12 col-md-6 leftCol">
+            <div class="item container">
+              <img src="/images/icon_tag.png" class="fieldImage">
+              <div class="fieldName">状态</div>
+              <div class="fieldOption">
+                <select>
+                  <option>全部</option>
+                  <option>全部 2</option>
+                  <option>全部 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="item container">
+              <img src="/images/icon_area.png" class="fieldImage">
+              <div class="fieldName">类型</div>
+              <div class="fieldOption">
+                <select>
+                  <option>私宅/别墅</option>
+                  <option>私宅/别墅 2</option>
+                  <option>私宅/别墅 3</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="item container">
+              <img src="/images/icon_size.png" class="fieldImage">
+              <div class="fieldName">建筑面积</div>
+              
+              <div class="fieldOption">
+                <select>
+                  <option>其余</option>
+                  <option>全部 2</option>
+                  <option>全部 3</option>
+                </select>
+              </div>
+
+              <div class="fieldOption">
+                <input type="text">
+              </div>
+
+              <div class="dash">-</div>
+
+              <div class="fieldOption">
+                <input type="text">
+              </div>
+
+              <div class="fieldOption">平米</div>
+
+              <div class="fieldOption">
+                <button>发送</button>
+              </div>
+            </div>
+
+            <div class="item container" id="priceField">
+              <img src="/images/icon_price.png" class="fieldImage">
+              <div class="fieldName">总价 (元）</div>
+              
+              <div class="fieldOption">
+                <input type="text">
+              </div>
+
+              <div class="dash">-</div>
+
+              <div class="fieldOption">
+                <input type="text">
+              </div>
+
+              <div class="fieldOption">
+                <button>发送</button>
+              </div>
+
+              <div class="fieldOption">
+                <input id="priceSlider" type="text" class="span2 " value="" data-slider-handle="square" data-slider-min="10" data-slider-max="1000" data-slider-step="5" data-slider-value="[0,450]" tooltip="hide"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="col col-xs-12 col-md-6">
+            <div class="item container">
+              <div class="row">
+                <div class="col col-xs-6">
+                  <div class="item container">
+                    <img src="/images/icon_bedRoom.png" class="fieldImage">
+                      <div class="fieldName">卧数量</div>
+                      <div class="fieldOption">
+                        <select>
+                          <option>其余</option>
+                          <option>全部 2</option>
+                          <option>全部 3</option>
+                        </select>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col col-xs-6">
+                  <div class="item container">
+                    <img src="/images/icon_bathRoom.png" class="fieldImage">
+                      <div class="fieldName">卧数量</div>
+                      <div class="fieldOption">
+                        <select>
+                          <option>其余</option>
+                          <option>全部 2</option>
+                          <option>全部 3</option>
+                        </select>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item container">
+              <div class="row">
+                <div class="col col-xs-6">
+                  <div class="item container">
+                    <img src="/images/icon_direction.png" class="fieldImage">
+                      <div class="fieldName">卧数量</div>
+                      <div class="fieldOption">
+                        <select>
+                          <option>其余</option>
+                          <option>全部 2</option>
+                          <option>全部 3</option>
+                        </select>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="col col-xs-6">
+                  <div class="item container">
+                    <img src="/images/icon_document.png" class="fieldImage">
+                      <div class="fieldName">卧数量</div>
+                      <div class="fieldOption">
+                        <select>
+                          <option>其余</option>
+                          <option>全部 2</option>
+                          <option>全部 3</option>
+                        </select>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="item container" id="additional">
+              <div class="row">
+                <div class="col col-xs-12">
+                  <img src="/images/icon_additional.png" class="fieldImage">
+                  <div class="fieldName"><strong>配套设施</strong> (您可以通过搜索属性的特定设施的缩小搜索范围)</div>
+                </div>
+
+                <div class="col col-xs-6">
+                   <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 游泳池
+                      </label>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 烧烤坑
+                      </label>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 24小时保安
+                      </label>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 桑拿
+                      </label>
+                    </div>
+
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 健身房
+                      </label>
+                    </div>
+                </div>
+
+                <div class="col col-xs-6">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 热水浴缸
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 体育设施
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 网球场
+                    </label>
+                  </div>
+
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 会所
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button>应用滤镜</button>        
       </div>
 
       <div class="resultContainer">
@@ -446,6 +664,7 @@
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
@@ -459,6 +678,9 @@
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
     <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+    <script src="bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
