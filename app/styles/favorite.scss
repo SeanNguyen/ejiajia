@@ -23,11 +23,12 @@
 	.quitArea {
 		width: 100px;
 		border-right: solid 1px $grey;
+		padding-top: 20px;
 
 		img {
 			height: 30px;
 			width: auto;
-			margin: 50px 35px 10px;
+			margin: 10px 35px;
 		}
 
 		h5 {
@@ -38,9 +39,19 @@
 	}
 
 	.houseItem {
-		width: 150px;
+		position: relative;
+		margin: 0 20px;
 		text-align: center;
 		padding-top: 10px;
+		overflow: visible;
+
+		:hover {
+			.houseInfo {
+				.connerRemoveButtom {
+					display: block;
+				}
+			}
+		}
 
 		.houseInfo {
 			position: relative;
@@ -51,7 +62,12 @@
 				width: auto;
 			}
 
-			label {
+			.connerRemoveButtom {
+				position: absolute;
+				top: -10px; bottom: auto;
+				left: auto; right: -10px;
+				height: 20px;
+				width: 20px;
 				display: none;
 			}
 		}
@@ -69,18 +85,10 @@
 		}
 	}
 
-	.houseItem.sold {
-		.houseInfo {
-			label {
-				position: absolute;
-				top: 0; left: 10px; right: auto;
-				z-index: 1000;
+	.houseItem:hover {
+		.connerRemoveButtom {
 				display: block;
-				height: 100%;
-				width: calc(100% - 20px);
-				background-color: rgba(0,0,0,0.5);
 			}
-		}
 	}
 
 	.moreInfoArea {
