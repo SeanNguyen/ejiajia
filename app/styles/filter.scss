@@ -42,87 +42,89 @@
 		}
 	}
 
-    .selectedItemContainer {
-        overflow: hidden;
-        max-height: 40px;
-        max-width: calc(100% - 150px);
+    .filterRightCol {
         float: left;
-
+        max-width: calc(100% - 200px);
         @media (max-width: $phoneMaxWidth) { 
-            max-width: calc(100% - 115px);
+            max-width: calc(100% - 130px);
         }
 
-        .selectedItem {
-            float: left;
-            height: 26px;
-            background-color: $secondaryColor;
-            padding-top: 5px;
-            padding-bottom: 5px;
-            padding-left: 10px;
-            padding-right: 5px;
-            margin: 7px 5px;
+        .selectedItemContainer {
+            overflow: hidden;
+            max-height: 40px;            
 
-            outline-style: solid;
-            outline-width: 1px;
-            outline-color: $grey;
-
-            .categoryImage {
-                height: 16px;
-                width: auto;
+            .selectedItem {
                 float: left;
-            }
-
-            h5 {
-              float: left;
-              font-size: 12px;
-              margin: 2px;
-            }
-
-            .removeButton {
-              height: 10px;
-              float: right;
-              margin: 3px;
-            }
-
-            @media (max-width: $phoneMaxWidth) {
-                height: 20px;
-                padding-top: 4px;
-                padding-bottom: 4px;
-                padding-left: 5px;
+                height: 26px;
+                background-color: $secondaryColor;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
                 padding-right: 5px;
+                margin: 7px 5px;
+
+                outline-style: solid;
+                outline-width: 1px;
+                outline-color: $grey;
 
                 .categoryImage {
-                    height: 12px;
+                    height: 16px;
                     width: auto;
                     float: left;
                 }
 
-                 h5 {
+                h5 {
                   float: left;
-                  font-size: 10px;
+                  font-size: 12px;
                   margin: 2px;
                 }
 
                 .removeButton {
-                  height: 5px;
+                  height: 10px;
                   float: right;
-                  margin: 5px 2px;
+                  margin: 3px;
                 }
+
+                @media (max-width: $phoneMaxWidth) {
+                    height: 20px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
+                    padding-left: 5px;
+                    padding-right: 5px;
+
+                    .categoryImage {
+                        height: 12px;
+                        width: auto;
+                        float: left;
+                    }
+
+                     h5 {
+                      float: left;
+                      font-size: 10px;
+                      margin: 2px;
+                    }
+
+                    .removeButton {
+                      height: 5px;
+                      float: right;
+                      margin: 5px 2px;
+                    }
+                }
+            }    
+        }
+
+        #expandButton {
+            clear: both;
+            height: 26px;
+            margin: 7px 5px;
+            background: none;
+            outline: none;
+            border: none;
+
+            @media (max-width: $phoneMaxWidth) {
+                font-size: 12px;
+                margin-top: 0px;
             }
-        }    
-    }
-
-    #expandButton {
-    	float: left;
-        height: 26px;
-    	margin: 7px 5px;
-    	background: none;
-    	outline: none;
-    	border: none;
-
-        @media (max-width: $phoneMaxWidth) {
-            font-size: 12px;
-            margin-top: 0px;
         }
     }
 }
