@@ -228,13 +228,16 @@
 
 			#triangle 
 			{
-			    border-color: $darkPrimaryColor rgba(0,0,0,0) rgba(0,0,0,0) $darkPrimaryColor;
-			    border-style: solid; 
-			    border-width: 50px; 
-			    width: 0px; /* real width is 100px; */
-			    height: 0px; /* same as width */
-			    line-height: 0px;
+			    width: 0;
+				height: 0;
+				border-style: solid;
+				border-color: #00bebd transparent transparent transparent;
 			    position: absolute;
+			    border-width: 75px 150px 0 0;
+
+				@media (max-width: $phoneMaxWidth) {
+					border-width: 50px 100px 0 0;
+				}
 			}
 
 
@@ -243,10 +246,17 @@
 			    position: absolute;
 			    top: 20px; /* 50 - something related to line heigth */
 			    left: -30px; /* 50 - 142/2 - something related to line height */
-			    transform: rotate(-45deg);
+			    transform: rotate(-30deg);
 			    width: 142px; /* base width -> (100^2 + 100^2)^1/2 */
 			    text-align: center;
 			    color: #FCFCFC;
+			    font-weight: bold;
+
+			    @media (max-width: $phoneMaxWidth) {
+			    	top: 10px;
+			    	left: -40px;
+					font-size: 14px;
+				}
 			}
 		}
 
