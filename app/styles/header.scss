@@ -1,9 +1,13 @@
 @import 'config';
 
 .header {
-    height: 60px;
+    height: 80px;
     padding-top: 10px;
     padding-bottom: 10px;
+
+    @media (max-width: $mobileMaxWidth) {
+      height: 60px;
+    }
 
     h3 {
       margin: 0;
