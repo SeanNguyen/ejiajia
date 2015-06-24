@@ -149,6 +149,14 @@
         padding-top: 10px;
         border-bottom: solid 1px $grey;
 
+        .leftCol {
+            padding-right: 0;
+        }
+
+        .rightCol {
+            padding-left: 0;
+        }
+
         .item {
             border: none;
 
@@ -171,6 +179,11 @@
             margin-top: 10px;
         }
 
+        .fieldText {
+            float: left;
+            margin-top: 10px;
+        }
+
         .fieldOption {
             float: left;
             margin: 5px 3px;
@@ -187,6 +200,8 @@
                     width: 30px;
                     padding-left: 3px;
                 }
+
+                line-height: 1.8em;
             }
 
             button {

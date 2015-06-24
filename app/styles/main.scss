@@ -12,14 +12,14 @@
 }
 
 @font-face {
-    font-family: "simhei";
-    src: url(../font/simhei.ttf) format("truetype");
+    font-family: "AdobeHeitiStd";
+    src: url(../fonts/AdobeHeitiStd-Regular.otf) format("truetype");
 }
 
 body {
   color: #808080;
 
-  // font-family: simhei;
+  font-family: AdobeHeitiStd, sans-serif;
 
   @import 'header';
   @import 'filter';
