@@ -50,8 +50,9 @@
         }
 
         .selectedItemContainer {
+            float: left;
             overflow: hidden;
-            max-height: 40px;            
+            max-height: 40px;
 
             .selectedItem {
                 float: left;
@@ -114,12 +115,13 @@
         }
 
         #expandButton {
-            clear: both;
+            float: left;
             height: 26px;
             margin: 7px 5px;
             background: none;
             outline: none;
             border: none;
+            color: #FCFCFC;
 
             @media (max-width: $phoneMaxWidth) {
                 font-size: 12px;
