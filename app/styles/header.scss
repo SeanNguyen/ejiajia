@@ -1,7 +1,7 @@
 @import 'config';
 
 .header {
-    height: 80px;
+    height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
 
@@ -26,6 +26,10 @@
       width: auto;
       margin-left: 10px;
       float: left;
+
+      @media (max-width: $mobileMaxWidth) {
+        height: 40px;
+      }
     }
 
     @media (min-width: $mobileMaxWidth) {
@@ -37,8 +41,6 @@
         outline-color: $grey;
         padding: 5px;
         margin: 15px 200px 15px 100px;
-
-        
 
         .selectedItem {
           float: left;
@@ -99,7 +101,7 @@
         outline-width: 2px;
         outline-color: $grey;
         padding: 5px;
-        margin: 15px 10px 15px 80px;
+        margin: 5px 10px 5px 60px;
 
         .selectedItem {
           float: left;

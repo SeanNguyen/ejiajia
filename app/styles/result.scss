@@ -7,11 +7,20 @@
 		background-color: $lightPrimaryColor;
 		margin: 0 -15px;
 
+		@media (max-width: $phoneMaxWidth) {
+			height: 30px;
+		}
+
 		.numberOfResult {
 			height: 50px;
 			font-size: 12px;
 			padding: 15px;
 			float: left;
+
+			@media (max-width: $phoneMaxWidth) {
+				height: 30px;
+				padding: 8px;
+			}
 		}
 
 		#sortController {
